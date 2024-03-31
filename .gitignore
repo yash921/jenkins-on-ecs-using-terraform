@@ -1,0 +1,15 @@
+# Ignore specific files under certain paths
+terraform/jenkins/ecr/.terraform
+terraform/jenkins/ecr/.tfstate
+terraform/jenkins/ecr/.tfstate.backup
+terraform/jenkins/ecr/.terraform.lock.hcl
+
+terraform/jenkins/network/.terraform
+terraform/jenkins/network/.tfstate
+terraform/jenkins/network/.tfstate.backup
+terraform/jenkins/network/.terraform.lock.hcl
+
+terraform/jenkins/ecs/.terraform
+terraform/jenkins/ecs/.tfstate
+terraform/jenkins/ecs/.tfstate.backup
+terraform/jenkins/ecs/.terraform.lock.hcl
