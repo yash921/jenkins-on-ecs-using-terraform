@@ -8,11 +8,11 @@ terraform  -chdir=terraform/jenkins/ecr  init
 terraform   -chdir=terraform/jenkins/ecr  plan -var-file ../../vars/ap-south-1/prod/ecr.tfvars
 terraform   -chdir=terraform/jenkins/ecr  apply -var-file ../../vars/ap-south-1/prod/ecr.tfvars
 
-# from inside dockerfiles/jenkins-controller
-aws ecr get-login-password --region ap-south-1 --profile dev_aws_r_and_d_account | docker login --username AWS --password-stdin 950541037016.dkr.ecr.ap-south-1.amazonaws.com
-docker build -t jenkins-controller:v1.0  .
-docker tag jenkins-controller:v1.0 950541037016.dkr.ecr.ap-south-1.amazonaws.com/jenkins-controller:v1.0
-docker push 950541037016.dkr.ecr.ap-south-1.amazonaws.com/jenkins-controller:v1.0
+# from inside dockerfiles/jenkins-controller & replace your aws profile & the output you get from the above command of ecr
+aws ecr get-login-password --region ap-south-1 --profile dev_aws_r_and_d_account | sudo docker login --username AWS --password-stdin 950541037016.dkr.ecr.ap-south-1.amazonaws.com
+sudo docker build -t jenkins-controller:v1.0  .
+sudo docker tag jenkins-controller:v1.0 950541037016.dkr.ecr.ap-south-1.amazonaws.com/jenkins-controller:v1.0
+sudo docker push 950541037016.dkr.ecr.ap-south-1.amazonaws.com/jenkins-controller:v1.0
 
 # ECS
 terraform  -chdir=terraform/jenkins/ecs  init 

@@ -1,1 +1,3 @@
 configuration-as-code
+ec2
+workflow-aggregator

@@ -1,10 +1,15 @@
 jenkins:
-  systemMessage: "Hello CacC"
+  numExecutors: 0
+  slaveAgentPort: 50000
+  systemMessage: Jenkins running on ECS
+  agentProtocols:
+    - JNLP4-connect
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
   securityRealm:
     local:
       allowsSignup: false
       users:
-        # create a user called admin
         - id: "admin"
           password: "admin"
-  authorizationStrategy: loggedInUsersCanDoAnything
