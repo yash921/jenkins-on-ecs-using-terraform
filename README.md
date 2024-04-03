@@ -1,4 +1,4 @@
-# Production Ready Jenkins on Amazon ECS Using Terraform & Jenkins ConfigAsCode
+# Production Ready Jenkins on Amazon ECS Fargate Using Terraform & Jenkins ConfigAsCode
 
 This project automates the deployment of infrastructure components required for running Jenkins on AWS ECS (Elastic Container Service).
 
