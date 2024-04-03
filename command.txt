@@ -23,6 +23,5 @@ terraform   -chdir=terraform/jenkins/ecs  apply -var-file ../../vars/ap-south-1/
 # Disable deletion protection from load balancer from ui
 # Delete all images from ecr repo.
 terraform   -chdir=terraform/jenkins/ecs  destroy -var-file ../../vars/ap-south-1/prod/ecs.tfvars
-
 terraform   -chdir=terraform/jenkins/ecr  destroy -var-file ../../vars/ap-south-1/prod/ecr.tfvars
 terraform   -chdir=terraform/jenkins/network  destroy -var-file ../../vars/ap-south-1/prod/network.tfvars
